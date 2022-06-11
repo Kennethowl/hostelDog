@@ -1,0 +1,10 @@
+C:\Users\USER\Desktop\HostelDogs\HostelDogs\HostelDogSettings\bin\Debug\HostelDogSettings.dll.config
+C:\Users\USER\Desktop\HostelDogs\HostelDogs\HostelDogSettings\bin\Debug\HostelDogSettings.dll
+C:\Users\USER\Desktop\HostelDogs\HostelDogs\HostelDogSettings\bin\Debug\HostelDogSettings.pdb
+C:\Users\USER\Desktop\HostelDogs\HostelDogs\HostelDogSettings\bin\Debug\EntityFramework.dll
+C:\Users\USER\Desktop\HostelDogs\HostelDogs\HostelDogSettings\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\USER\Desktop\HostelDogs\HostelDogs\HostelDogSettings\bin\Debug\EntityFramework.xml
+C:\Users\USER\Desktop\HostelDogs\HostelDogs\HostelDogSettings\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\USER\Desktop\HostelDogs\HostelDogs\HostelDogSettings\obj\Debug\HostelDogSettings.csprojResolveAssemblyReference.cache
+C:\Users\USER\Desktop\HostelDogs\HostelDogs\HostelDogSettings\obj\Debug\HostelDogSettings.dll
+C:\Users\USER\Desktop\HostelDogs\HostelDogs\HostelDogSettings\obj\Debug\HostelDogSettings.pdb
