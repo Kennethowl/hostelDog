@@ -35,6 +35,7 @@ namespace HostelDogSettings
                 var perrosExistentes = contexto.Perros.Find(perro.ID);
                 perrosExistentes.Nombre = perro.Nombre;
                 perrosExistentes.FechadeIngreso = perro.FechadeIngreso;
+                perrosExistentes.Imagen = perro.Imagen;
             }
 
             contexto.SaveChanges();

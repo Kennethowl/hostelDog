@@ -33,16 +33,76 @@ namespace HostelAdmin.Controllers
         }
 
         [HttpPost]
-        public ActionResult Create(Perro perro)
+        public ActionResult Create(Perro perro, HttpPostedFileBase imagen)
         {
             if (ModelState.IsValid)
             {
+                if (imagen != null)
+                {
+                    perro.Imagen = GuardarImagen(imagen);
+                }
+
                 perroBL.GuardarPerros(perro);
 
                 return RedirectToAction("Index");
             }
 
             return View(perro);
+        }
+
+        public ActionResult Edit(int id)
+        {
+            var perro = perroBL.ObtenerPerros(id);
+
+            return View(perro);
+        }
+
+        [HttpPost]
+        public ActionResult Edit(Perro perro,HttpPostedFileBase imagen)
+        {
+            if (ModelState.IsValid)
+            {
+                if (imagen != null)
+                {
+                    perro.Imagen = GuardarImagen(imagen);
+                }
+
+                perroBL.GuardarPerros(perro);
+
+                return RedirectToAction("Index");
+            }
+
+            return View(perro);
+        }
+
+        public ActionResult Details(int id)
+        {
+            var perro = perroBL.ObtenerPerros(id);
+
+            return View(perro);
+        }
+
+        public ActionResult Delete(int id)
+        {
+            var perro = perroBL.ObtenerPerros(id);
+
+            return View(perro);
+        }
+
+        [HttpPost]
+        public ActionResult Delete(Perro perro)
+        {
+            perroBL.EliminarPerros(perro.ID);
+
+            return RedirectToAction("Index");
+        }
+
+        public string GuardarImagen(HttpPostedFileBase imagen)
+        {
+            string path = Server.MapPath("~/Imagenes/" + imagen.FileName);
+            imagen.SaveAs(path);
+
+            return "/Imagenes/" + imagen.FileName;
         }
     }
 }

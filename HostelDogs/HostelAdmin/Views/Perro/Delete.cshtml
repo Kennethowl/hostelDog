@@ -1,0 +1,46 @@
+﻿@model HostelDogSettings.Perro
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Desea eliminar el registro definitivamente?</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+
+       <dt>
+            @Html.DisplayNameFor(model => model.FechadeIngreso)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechadeIngreso)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Imagen)
+        </dt>
+
+        <dd>
+            <img src="@Model.Imagen" alt="@Model." style="width:200px; height:auto;" />
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Regresar", "Index")
+        </div>
+    }
+</div>

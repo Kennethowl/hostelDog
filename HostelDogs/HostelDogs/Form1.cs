@@ -19,7 +19,7 @@ namespace HostelDogs
             var perrosBL = new PerroBL();
             var listaDePerros = perrosBL.ObtenerPerro();
 
-            perroBindingSource1.DataSource = listaDePerros;
+            listaDePerrosBindingSource.DataSource = listaDePerros;
         }
     }
 }

@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HostelDogs", "HostelDogs\HostelDogs.csproj", "{51F5EBE4-A012-4D1F-A3CB-59D61F4E6F37}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HostelDogSettings", "HostelDogSettings\HostelDogSettings.csproj", "{B05D8056-BB20-4693-B2FE-8E4EAB4941D9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HostelAdmin", "HostelAdmin\HostelAdmin.csproj", "{5712CC11-D8DD-4DAC-9585-F7B6DB65FA43}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HostelDog", "HostelDog\HostelDog.csproj", "{36A5D77D-3E2B-413E-95E5-869A7408DAD9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,10 +15,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{51F5EBE4-A012-4D1F-A3CB-59D61F4E6F37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{51F5EBE4-A012-4D1F-A3CB-59D61F4E6F37}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{51F5EBE4-A012-4D1F-A3CB-59D61F4E6F37}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{51F5EBE4-A012-4D1F-A3CB-59D61F4E6F37}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B05D8056-BB20-4693-B2FE-8E4EAB4941D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B05D8056-BB20-4693-B2FE-8E4EAB4941D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B05D8056-BB20-4693-B2FE-8E4EAB4941D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -27,6 +23,10 @@ Global
 		{5712CC11-D8DD-4DAC-9585-F7B6DB65FA43}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5712CC11-D8DD-4DAC-9585-F7B6DB65FA43}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5712CC11-D8DD-4DAC-9585-F7B6DB65FA43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36A5D77D-3E2B-413E-95E5-869A7408DAD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36A5D77D-3E2B-413E-95E5-869A7408DAD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36A5D77D-3E2B-413E-95E5-869A7408DAD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36A5D77D-3E2B-413E-95E5-869A7408DAD9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
