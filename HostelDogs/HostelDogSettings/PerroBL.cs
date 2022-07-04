@@ -19,7 +19,7 @@ namespace HostelDogSettings
 
         public List<Perro> ObtenerPerro()
         {
-            ListaDePerros = contexto.Perros.ToList();
+            ListaDePerros = contexto.Perros.Include("Raza").OrderBy(r => r.Raza.Descripcion).ThenBy(r => r.Raza).ToList();
 
             return ListaDePerros;
         }
@@ -36,6 +36,7 @@ namespace HostelDogSettings
                 perrosExistentes.Nombre = perro.Nombre;
                 perrosExistentes.FechadeIngreso = perro.FechadeIngreso;
                 perrosExistentes.Imagen = perro.Imagen;
+                perrosExistentes.RazaID = perro.RazaID;
             }
 
             contexto.SaveChanges();
@@ -43,7 +44,7 @@ namespace HostelDogSettings
 
         public Perro ObtenerPerros(int id)
         {
-            var perro = contexto.Perros.Find(id);
+            var perro = contexto.Perros.Include("Raza").FirstOrDefault(i => i.ID == id);
 
             return perro;
         }

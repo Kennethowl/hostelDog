@@ -33,6 +33,14 @@
             <img src="@Model.Imagen" alt="@Model." style="width:200px; height:auto;" />
         </dd>
 
+        <dt>
+            @Html.DisplayNameFor(model => model.Raza.Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Raza.Descripcion)
+        </dd>
+
     </dl>
 
     @using (Html.BeginForm()) {

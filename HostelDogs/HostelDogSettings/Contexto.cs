@@ -15,5 +15,6 @@ namespace HostelDogSettings
         }
 
         public DbSet<Perro> Perros { get; set; }
+        public DbSet<Raza> Razas { get; set; }
     }
 }

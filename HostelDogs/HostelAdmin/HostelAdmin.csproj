@@ -155,6 +155,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PerroController.cs" />
+    <Compile Include="Controllers\RazaController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -173,6 +174,11 @@
     <Content Include="Views\Perro\Edit.cshtml" />
     <Content Include="Views\Perro\Details.cshtml" />
     <Content Include="Views\Perro\Delete.cshtml" />
+    <Content Include="Views\Raza\Index.cshtml" />
+    <Content Include="Views\Raza\Create.cshtml" />
+    <Content Include="Views\Raza\Edit.cshtml" />
+    <Content Include="Views\Raza\Details.cshtml" />
+    <Content Include="Views\Raza\Delete.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

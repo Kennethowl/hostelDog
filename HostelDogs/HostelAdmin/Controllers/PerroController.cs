@@ -10,10 +10,12 @@ namespace HostelAdmin.Controllers
     public class PerroController : Controller
     {
         PerroBL perroBL;
+        RazaBL razaBL;
 
         public PerroController()
         {
             perroBL = new PerroBL();
+            razaBL = new RazaBL();
         }
 
         // GET: Perro
@@ -28,6 +30,9 @@ namespace HostelAdmin.Controllers
         public ActionResult Create()
         {
             var perro = new Perro();
+            var raza = razaBL.ObtenerRaza();
+
+            ViewBag.RazaID = new SelectList(raza, "ID", "Descripcion", "Detalle");
 
             return View(perro);
         }
@@ -37,6 +42,11 @@ namespace HostelAdmin.Controllers
         {
             if (ModelState.IsValid)
             {
+                if (perro.RazaID == 0)
+                {
+                    ModelState.AddModelError("RazaID", "Seleccione una raza respectiva");
+                }
+
                 if (imagen != null)
                 {
                     perro.Imagen = GuardarImagen(imagen);
@@ -47,12 +57,19 @@ namespace HostelAdmin.Controllers
                 return RedirectToAction("Index");
             }
 
+            var raza = razaBL.ObtenerRaza();
+
+            ViewBag.RazaID = new SelectList(raza, "ID", "Descripcion", "Detalle");
+
             return View(perro);
         }
 
         public ActionResult Edit(int id)
         {
             var perro = perroBL.ObtenerPerros(id);
+            var raza = razaBL.ObtenerRaza();
+
+            ViewBag.RazaID = new SelectList(raza, "ID", "Descripcion", "Detalle", perro.RazaID);
 
             return View(perro);
         }
@@ -62,6 +79,11 @@ namespace HostelAdmin.Controllers
         {
             if (ModelState.IsValid)
             {
+                if (perro.RazaID == 0)
+                {
+                    ModelState.AddModelError("RazaID", "Seleccione una raza respectiva");
+                }
+
                 if (imagen != null)
                 {
                     perro.Imagen = GuardarImagen(imagen);
@@ -71,6 +93,10 @@ namespace HostelAdmin.Controllers
 
                 return RedirectToAction("Index");
             }
+
+            var raza = razaBL.ObtenerRaza();
+
+            ViewBag.RazaID = new SelectList(raza, "ID", "Descripcion", "Detalle");
 
             return View(perro);
         }
